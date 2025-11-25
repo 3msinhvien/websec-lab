@@ -1,0 +1,467 @@
+.lab-container {
+    padding: 1rem;
+}
+
+.lab-container h2 {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.lab-description {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+/* Search Form */
+.search-form,
+.image-form {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.search-input,
+.image-input {
+    flex: 1;
+    padding: 0.75rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.search-input:focus,
+.image-input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.search-button,
+.image-button {
+    padding: 0.75rem 1.5rem;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.search-button:hover,
+.image-button:hover {
+    background: #5568d3;
+}
+
+/* Search Results */
+.search-results,
+.image-display {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.search-results h3,
+.image-display h3 {
+    margin: 0 0 1rem 0;
+    color: #333;
+}
+
+.search-term {
+    background: white;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    border-left: 4px solid #667eea;
+}
+
+.no-results {
+    color: #999;
+    font-style: italic;
+}
+
+/* Alert Box */
+.alert-box {
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.alert-box.error {
+    background: #ffebee;
+    color: #c62828;
+    border-left: 4px solid #c62828;
+}
+
+/* Lab Info */
+.lab-info {
+    background: #e3f2fd;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #2196f3;
+    margin-top: 2rem;
+}
+
+.lab-info h4 {
+    margin: 0 0 0.5rem 0;
+    color: #1976d2;
+}
+
+.lab-info p {
+    margin: 0 0 1rem 0;
+    color: #555;
+}
+
+.lab-info ul {
+    margin: 0.5rem 0 0 1.5rem;
+    color: #555;
+}
+
+.lab-info li {
+    margin-bottom: 0.5rem;
+}
+
+.success-message {
+    background: #4caf50;
+    color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.2rem;
+    animation: slideIn 0.5s ease;
+}
+
+.points-earned {
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffeb3b;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.code-example {
+    display: block;
+    background: white;
+    padding: 0.75rem;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+    color: #d32f2f;
+    font-family: 'Courier New', monospace;
+}
+
+/* Comments Section */
+.comments-section {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.comments-list {
+    margin-bottom: 2rem;
+}
+
+.comment-item {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    color: #667eea;
+}
+
+.comment-time {
+    color: #999;
+    font-size: 0.9rem;
+}
+
+.comment-text {
+    color: #555;
+    line-height: 1.6;
+}
+
+.comment-form {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.comment-form h4 {
+    margin: 0 0 1rem 0;
+    color: #333;
+}
+
+.comment-input,
+.comment-textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-family: inherit;
+}
+
+.comment-input:focus,
+.comment-textarea:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.comment-button {
+    padding: 0.75rem 1.5rem;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.comment-button:hover {
+    background: #5568d3;
+}
+
+/* Dynamic Content */
+.dynamic-content-section {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    min-height: 200px;
+}
+
+.content-display {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    min-height: 150px;
+}
+
+.placeholder {
+    text-align: center;
+    padding: 3rem;
+    color: #999;
+}
+
+.example {
+    background: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 1rem;
+    color: #667eea;
+    font-family: monospace;
+}
+
+.url-info {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.url-info h4 {
+    margin: 0 0 0.5rem 0;
+    color: #333;
+}
+
+.url-display {
+    display: block;
+    background: white;
+    padding: 0.75rem;
+    border-radius: 5px;
+    color: #667eea;
+    word-break: break-all;
+    font-family: monospace;
+}
+
+/* Profile Section */
+.profile-section {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.profile-view {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.profile-avatar {
+    font-size: 4rem;
+    background: #667eea;
+    color: white;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.profile-info h3 {
+    margin: 0 0 0.5rem 0;
+    color: #333;
+}
+
+.edit-button {
+    padding: 0.5rem 1rem;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+}
+
+.edit-button:hover {
+    background: #5568d3;
+}
+
+.profile-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.profile-field {
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.profile-field strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #667eea;
+}
+
+.profile-bio,
+.profile-website {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Profile Edit Form */
+.profile-edit {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.profile-edit h3 {
+    margin: 0 0 1.5rem 0;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #555;
+    font-weight: 600;
+}
+
+.profile-input,
+.profile-textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.profile-input:focus,
+.profile-textarea:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.form-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.save-button,
+.cancel-button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.save-button {
+    background: #4caf50;
+    color: white;
+}
+
+.save-button:hover {
+    background: #45a049;
+}
+
+.cancel-button {
+    background: #f44336;
+    color: white;
+}
+
+.cancel-button:hover {
+    background: #da190b;
+}
+
+.image-form {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.image-form label {
+    margin-bottom: 0.5rem;
+    color: #555;
+    font-weight: 600;
+}
