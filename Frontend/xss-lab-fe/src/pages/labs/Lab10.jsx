@@ -45,7 +45,7 @@ function Lab10() {
 
   const submitProgress = async (payload, completed) => {
     if (!isAuthenticated() || submitting) return;
-    
+
     setSubmitting(true);
     try {
       const response = await progressAPI.submitLab(10, payload, completed);
@@ -62,11 +62,11 @@ function Lab10() {
   const handleViewOrder = (e) => {
     e.preventDefault();
     const order = orders.find(o => o.id === parseInt(orderId));
-    
+
     if (order) {
       setCurrentOrder(order);
       setEditAddress(order.address);
-      
+
       // Check if accessing other user's order
       if (order.userId !== 1) {
         setSuccess(true);
@@ -100,7 +100,7 @@ function Lab10() {
           Hệ thống quản lý đơn hàng cho phép xem và chỉnh sửa thông tin đơn hàng dựa trên order_id.
           Không có kiểm tra xem đơn hàng có thuộc về người dùng hiện tại hay không.
         </p>
-        
+
         <h3>🎯 Mục tiêu</h3>
         <p>Truy cập và xem (hoặc sửa) đơn hàng không thuộc về bạn</p>
 
@@ -167,7 +167,7 @@ function Lab10() {
                     value={editAddress}
                     onChange={(e) => setEditAddress(e.target.value)}
                     className="vulnerable-input"
-                    style={{marginLeft: '0.5rem'}}
+                    style={{ marginLeft: '0.5rem' }}
                   />
                 ) : (
                   <span>{currentOrder.address}</span>
@@ -198,7 +198,7 @@ function Lab10() {
           <h4>ℹ️ Thông tin</h4>
           <p>Đơn hàng của bạn: <code>#101</code></p>
           <p>Các đơn hàng khác: <code>#102, #103</code></p>
-          <p style={{marginTop: '0.5rem', color: '#F44336'}}>
+          <p style={{ marginTop: '0.5rem', color: '#F44336' }}>
             ⚠️ Lỗ hổng IDOR cho phép bạn xem và chỉnh sửa đơn hàng của người khác
             mà không cần xác thực quyền sở hữu.
           </p>

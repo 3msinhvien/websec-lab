@@ -34,28 +34,37 @@ export const users = [
 // User progress tracking (in-memory storage)
 export const userProgress = {
     1: { // student1
-        completedLabs: [1, 2],
+        completedLabs: [1, 2, 3, 4, 7, 9],
         attempts: {
             1: 3,
             2: 5,
-            3: 1
+            3: 2,
+            4: 4,
+            5: 6,
+            7: 3,
+            9: 1
         },
-        lastActivity: '2025-11-20T10:30:00.000Z'
+        lastActivity: '2025-11-28T10:30:00.000Z'
     },
     2: { // student2
-        completedLabs: [1],
+        completedLabs: [1, 2, 7],
         attempts: {
             1: 2,
-            2: 4
+            2: 4,
+            3: 5,
+            7: 2,
+            8: 3
         },
-        lastActivity: '2025-11-22T14:20:00.000Z'
+        lastActivity: '2025-11-28T14:20:00.000Z'
     },
     3: { // student3
-        completedLabs: [],
+        completedLabs: [1],
         attempts: {
-            1: 1
+            1: 1,
+            2: 3,
+            3: 2
         },
-        lastActivity: '2025-11-24T09:15:00.000Z'
+        lastActivity: '2025-11-28T09:15:00.000Z'
     }
 };
 

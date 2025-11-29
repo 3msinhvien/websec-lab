@@ -13,24 +13,24 @@ function Lab9() {
   const { isAuthenticated } = useAuth();
 
   const users = [
-    { 
-      id: 1, 
-      name: 'Bạn (Current User)', 
+    {
+      id: 1,
+      name: 'Bạn (Current User)',
       email: 'your@email.com',
       phone: '0123456789',
       address: '123 Đường ABC, Hà Nội'
     },
-    { 
-      id: 2, 
-      name: 'Nguyễn Văn A', 
+    {
+      id: 2,
+      name: 'Nguyễn Văn A',
       email: 'nguyenvana@email.com',
       phone: '0987654321',
       address: '456 Đường XYZ, TP.HCM',
       ssn: '123-45-6789'
     },
-    { 
-      id: 3, 
-      name: 'Trần Thị B', 
+    {
+      id: 3,
+      name: 'Trần Thị B',
       email: 'tranthib@email.com',
       phone: '0912345678',
       address: '789 Đường DEF, Đà Nẵng',
@@ -40,7 +40,7 @@ function Lab9() {
 
   const submitProgress = async (userId, completed) => {
     if (!isAuthenticated() || submitting) return;
-    
+
     setSubmitting(true);
     try {
       const response = await progressAPI.submitLab(9, `user_id=${userId}`, completed);
@@ -57,10 +57,10 @@ function Lab9() {
   useEffect(() => {
     const userId = parseInt(searchParams.get('user_id')) || 1;
     const user = users.find(u => u.id === userId);
-    
+
     if (user) {
       setCurrentUser(user);
-      
+
       // Check if accessed other user's profile
       if (userId !== 1) {
         setSuccess(true);
@@ -88,7 +88,7 @@ function Lab9() {
           Ứng dụng hiển thị thông tin profile dựa trên tham số user_id trong URL.
           Không có kiểm tra quyền truy cập, cho phép xem profile của bất kỳ ai.
         </p>
-        
+
         <h3>🎯 Mục tiêu</h3>
         <p>Truy cập và xem thông tin profile của người dùng khác</p>
 
@@ -163,7 +163,7 @@ function Lab9() {
             <strong>IDOR (Insecure Direct Object Reference)</strong> xảy ra khi ứng dụng
             không kiểm tra quyền truy cập trước khi trả về dữ liệu dựa trên ID do user cung cấp.
           </p>
-          <p style={{marginTop: '0.5rem'}}>
+          <p style={{ marginTop: '0.5rem' }}>
             Trong trường hợp này, bạn có thể xem thông tin nhạy cảm của người khác
             chỉ bằng cách thay đổi tham số user_id trong URL.
           </p>

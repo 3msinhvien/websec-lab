@@ -13,7 +13,7 @@ function Lab12() {
 
   const submitProgress = async (payload, completed) => {
     if (!isAuthenticated() || submitting) return;
-    
+
     setSubmitting(true);
     try {
       const response = await progressAPI.submitLab(12, payload, completed);
@@ -145,7 +145,7 @@ function Lab12() {
           payload khiến nạn nhân vô tình xóa tài khoản của mình chỉ bằng cách
           truy cập một URL hoặc xem một ảnh.
         </p>
-        
+
         <h3>🎯 Mục tiêu</h3>
         <p>Tạo CSRF payload sử dụng thẻ &lt;img&gt; hoặc JavaScript để xóa tài khoản</p>
 
@@ -213,25 +213,25 @@ function Lab12() {
 
         <div className="info-box">
           <h4>ℹ️ Attack Vectors</h4>
-          <div style={{textAlign: 'left', marginTop: '1rem'}}>
+          <div style={{ textAlign: 'left', marginTop: '1rem' }}>
             <p><strong>1. Image Tag Attack:</strong></p>
-            <code style={{display: 'block', padding: '0.5rem', background: '#f5f5f5', marginBottom: '1rem'}}>
+            <code style={{ display: 'block', padding: '0.5rem', background: '#f5f5f5', marginBottom: '1rem' }}>
               &lt;img src="http://target.com/delete?confirm=yes" /&gt;
             </code>
 
             <p><strong>2. Hidden Form:</strong></p>
-            <code style={{display: 'block', padding: '0.5rem', background: '#f5f5f5', marginBottom: '1rem'}}>
+            <code style={{ display: 'block', padding: '0.5rem', background: '#f5f5f5', marginBottom: '1rem' }}>
               &lt;form action="..." method="POST"&gt;&lt;/form&gt;
             </code>
 
             <p><strong>3. JavaScript Fetch:</strong></p>
-            <code style={{display: 'block', padding: '0.5rem', background: '#f5f5f5'}}>
+            <code style={{ display: 'block', padding: '0.5rem', background: '#f5f5f5' }}>
               fetch(..., {'{'}credentials: 'include'{'}'})
             </code>
           </div>
 
-          <h4 style={{marginTop: '1.5rem'}}>🛡️ Advanced Prevention</h4>
-          <ul style={{textAlign: 'left', marginLeft: '1rem'}}>
+          <h4 style={{ marginTop: '1.5rem' }}>🛡️ Advanced Prevention</h4>
+          <ul style={{ textAlign: 'left', marginLeft: '1rem' }}>
             <li>Sử dụng CSRF tokens cho mọi state-changing request</li>
             <li>Kiểm tra Origin/Referer headers</li>
             <li>Sử dụng SameSite=Strict cho cookies</li>

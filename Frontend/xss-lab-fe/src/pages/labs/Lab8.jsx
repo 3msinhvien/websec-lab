@@ -25,7 +25,7 @@ function Lab8() {
 
   const submitProgress = async (payload, completed) => {
     if (!isAuthenticated() || submitting) return;
-    
+
     setSubmitting(true);
     try {
       const response = await progressAPI.submitLab(8, payload, completed);
@@ -41,15 +41,15 @@ function Lab8() {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    
+
     const query = `SELECT name, price FROM products WHERE id=${productId}`;
-    
+
     // Check for UNION-based SQL injection
     if (productId.includes('UNION') || productId.includes('union')) {
-      const extractedData = hiddenUsers.map(u => 
+      const extractedData = hiddenUsers.map(u =>
         `${u.username} | ${u.password} | ${u.role}`
       ).join('\n');
-      
+
       setResult(
         `✅ SQL Injection thành công!\n\n` +
         `Query thực thi: ${query}\n\n` +
@@ -92,7 +92,7 @@ function Lab8() {
           Ứng dụng cho phép tìm kiếm sản phẩm theo ID. Database chứa nhiều bảng khác nhau,
           bao gồm bảng users với thông tin nhạy cảm. Hãy trích xuất dữ liệu từ bảng users.
         </p>
-        
+
         <h3>🎯 Mục tiêu</h3>
         <p>Sử dụng UNION-based SQLi để lấy username và password từ bảng users</p>
 
@@ -147,8 +147,8 @@ function Lab8() {
               <li key={p.id}>ID {p.id}: {p.name} - {p.price}</li>
             ))}
           </ul>
-          
-          <h4 style={{marginTop: '1rem'}}>🗄️ Cấu trúc Database</h4>
+
+          <h4 style={{ marginTop: '1rem' }}>🗄️ Cấu trúc Database</h4>
           <p><strong>Bảng products:</strong> id, name, price</p>
           <p><strong>Bảng users:</strong> username, password, role</p>
         </div>

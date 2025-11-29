@@ -81,7 +81,7 @@ function Leaderboard() {
                                     </div>
                                 </div>
                                 <div className="col-labs">
-                                    <span className="lab-count">{user.completedLabs}/6</span>
+                                    <span className="lab-count">{user.completedLabs}/12</span>
                                 </div>
                                 <div className="col-points">
                                     <span className="points-badge">{user.totalPoints} điểm</span>
@@ -96,15 +96,38 @@ function Leaderboard() {
 
                 <div className="leaderboard-info">
                     <h3>📌 Hướng dẫn tính điểm</h3>
-                    <ul>
-                        <li>Lab 1: 10 điểm</li>
-                        <li>Lab 2: 20 điểm</li>
-                        <li>Lab 3: 20 điểm</li>
-                        <li>Lab 4: 25 điểm</li>
-                        <li>Lab 5: 30 điểm</li>
-                        <li>Lab 6: 35 điểm</li>
-                    </ul>
-                    <p className="total-info">Tổng điểm tối đa: <strong>140 điểm</strong></p>
+                    <div className="points-grid">
+                        <div className="points-category">
+                            <h4>🔴 XSS (130đ)</h4>
+                            <ul>
+                                <li>Lab 1-2: 10-20đ (Dễ - TB)</li>
+                                <li>Lab 3-4: 20-25đ (TB)</li>
+                                <li>Lab 5-6: 30-35đ (Khó)</li>
+                            </ul>
+                        </div>
+                        <div className="points-category">
+                            <h4>🟠 SQL Injection (60đ)</h4>
+                            <ul>
+                                <li>Lab 7: 25đ (Auth Bypass)</li>
+                                <li>Lab 8: 35đ (Data Extraction)</li>
+                            </ul>
+                        </div>
+                        <div className="points-category">
+                            <h4>🟡 IDOR (35đ)</h4>
+                            <ul>
+                                <li>Lab 9: 15đ (Profile Access)</li>
+                                <li>Lab 10: 20đ (Order Manipulation)</li>
+                            </ul>
+                        </div>
+                        <div className="points-category">
+                            <h4>🟢 CSRF (55đ)</h4>
+                            <ul>
+                                <li>Lab 11: 25đ (Email Change)</li>
+                                <li>Lab 12: 30đ (Account Delete)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p className="total-info">Tổng điểm tối đa: <strong>255 điểm</strong> (12 labs)</p>
                 </div>
             </div>
         </div>

@@ -14,7 +14,7 @@ function Lab11() {
 
   const submitProgress = async (payload, completed) => {
     if (!isAuthenticated() || submitting) return;
-    
+
     setSubmitting(true);
     try {
       const response = await progressAPI.submitLab(11, payload, completed);
@@ -30,7 +30,7 @@ function Lab11() {
 
   const handleChangeEmail = (e) => {
     e.preventDefault();
-    
+
     // Simulate email change (vulnerable to CSRF)
     setEmail(newEmail);
     alert(`✅ Email đã được thay đổi thành: ${newEmail}`);
@@ -93,7 +93,7 @@ function Lab11() {
           Ứng dụng cho phép thay đổi email mà không có token CSRF protection.
           Kẻ tấn công có thể tạo một trang HTML để thay đổi email của nạn nhân.
         </p>
-        
+
         <h3>🎯 Mục tiêu</h3>
         <p>Tạo một trang HTML có form tự động submit để thay đổi email người dùng</p>
 
@@ -161,16 +161,16 @@ function Lab11() {
 
         <div className="info-box">
           <h4>ℹ️ CSRF Attack Flow</h4>
-          <ol style={{textAlign: 'left', marginLeft: '1rem'}}>
+          <ol style={{ textAlign: 'left', marginLeft: '1rem' }}>
             <li>Attacker tạo trang HTML độc hại với form tự động submit</li>
             <li>Victim truy cập trang HTML (qua link, email, etc.)</li>
             <li>Form tự động submit request đến server</li>
             <li>Server thực hiện thay đổi email vì không có CSRF token</li>
             <li>Email của victim bị thay đổi thành email của attacker</li>
           </ol>
-          
-          <h4 style={{marginTop: '1rem'}}>🛡️ Prevention</h4>
-          <ul style={{textAlign: 'left', marginLeft: '1rem'}}>
+
+          <h4 style={{ marginTop: '1rem' }}>🛡️ Prevention</h4>
+          <ul style={{ textAlign: 'left', marginLeft: '1rem' }}>
             <li>Sử dụng CSRF Token</li>
             <li>Kiểm tra SameSite cookie attribute</li>
             <li>Xác thực lại mật khẩu cho thao tác nhạy cảm</li>

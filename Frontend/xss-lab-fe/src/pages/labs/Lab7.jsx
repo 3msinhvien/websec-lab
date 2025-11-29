@@ -14,7 +14,7 @@ function Lab7() {
 
   const submitProgress = async (payload, completed) => {
     if (!isAuthenticated() || submitting) return;
-    
+
     setSubmitting(true);
     try {
       const response = await progressAPI.submitLab(7, payload, completed);
@@ -30,13 +30,13 @@ function Lab7() {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    
+
     // Vulnerable SQL query simulation
     const query = `SELECT * FROM users WHERE username='${username}' AND password='${password}'`;
-    
+
     // Check if SQL injection is successful
-    if (username.includes("'--") || username.includes("' OR '1'='1") || 
-        username.includes("' OR 1=1--") || username.includes("admin'--")) {
+    if (username.includes("'--") || username.includes("' OR '1'='1") ||
+      username.includes("' OR 1=1--") || username.includes("admin'--")) {
       setResult(`✅ Đăng nhập thành công với tư cách: admin\n\nQuery thực thi: ${query}`);
       setSuccess(true);
       submitProgress(username, true);
@@ -59,7 +59,7 @@ function Lab7() {
           Ứng dụng sử dụng SQL query để xác thực người dùng mà không có cơ chế bảo vệ.
           Hãy tìm cách đăng nhập mà không cần biết mật khẩu.
         </p>
-        
+
         <h3>🎯 Mục tiêu</h3>
         <p>Đăng nhập với quyền admin mà không cần biết mật khẩu</p>
 

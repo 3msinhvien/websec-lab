@@ -40,7 +40,7 @@ function Progress() {
         );
     }
 
-    const totalLabs = 6;
+    const totalLabs = 12;
     const completedCount = progress?.completedLabs?.length || 0;
     const completionRate = ((completedCount / totalLabs) * 100).toFixed(1);
     const totalAttempts = Object.values(progress?.attempts || {}).reduce((sum, count) => sum + count, 0);
@@ -50,7 +50,7 @@ function Progress() {
             <div className="progress-container">
                 <div className="progress-header">
                     <h1>📊 Tiến trình của bạn</h1>
-                    <p>Theo dõi quá trình học tập XSS Security</p>
+                    <p>Theo dõi quá trình học tập về bảo mật web</p>
                 </div>
 
                 <div className="stats-grid">
@@ -102,7 +102,7 @@ function Progress() {
                 <div className="labs-progress">
                     <h3>Chi tiết từng Lab</h3>
                     <div className="labs-list">
-                        {[1, 2, 3, 4, 5, 6].map((labId) => {
+                        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((labId) => {
                             const isCompleted = progress?.completedLabs?.includes(labId);
                             const attempts = progress?.attempts?.[labId] || 0;
 

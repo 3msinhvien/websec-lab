@@ -19,13 +19,23 @@ function Home() {
                 <div className="features-grid">
                     <div className="feature-card">
                         <div className="feature-icon">🎯</div>
+                        <h3>12 Labs Thực Hành</h3>
+                        <p>6 XSS + 2 SQLi + 2 IDOR + 2 CSRF - Tổng 255 điểm</p>
+                    </div>
+                    <div className="feature-card">
+                        <div className="feature-icon">📊</div>
                         <h3>Nhiều cấp độ</h3>
-                        <p>Từ cơ bản đến nâng cao, phù hợp với mọi trình độ</p>
+                        <p>Dễ (10-15đ), Trung bình (20-25đ), Khó (30-35đ)</p>
                     </div>
                     <div className="feature-card">
                         <div className="feature-icon">🔒</div>
                         <h3>Môi trường an toàn</h3>
                         <p>Thực hành trong môi trường sandbox an toàn</p>
+                    </div>
+                    <div className="feature-card">
+                        <div className="feature-icon">🏆</div>
+                        <h3>Bảng xếp hạng</h3>
+                        <p>Cạnh tranh và theo dõi tiến độ học tập</p>
                     </div>
                     <div className="feature-card">
                         <div className="feature-icon">📚</div>
@@ -34,8 +44,8 @@ function Home() {
                     </div>
                     <div className="feature-card">
                         <div className="feature-icon">✅</div>
-                        <h3>Phản hồi ngay lập tức</h3>
-                        <p>Kiểm tra giải pháp và nhận phản hồi tức thì</p>
+                        <h3>Tự động chấm điểm</h3>
+                        <p>Nhận điểm và phản hồi ngay lập tức</p>
                     </div>
                 </div>
             </div>
@@ -49,20 +59,20 @@ function Home() {
                     </p>
                     <div className="xss-types">
                         <div className="xss-type">
-                            <h4>🔴 XSS (Cross-Site Scripting)</h4>
-                            <p>Chèn mã JavaScript độc hại vào trang web</p>
+                            <h4>🔴 XSS - 6 Labs (130đ)</h4>
+                            <p>Reflected, Stored, DOM-based XSS và bypass techniques</p>
                         </div>
                         <div className="xss-type">
-                            <h4>🟠 SQL Injection</h4>
-                            <p>Thực thi câu lệnh SQL độc hại để truy cập dữ liệu</p>
+                            <h4>🟠 SQL Injection - 2 Labs (60đ)</h4>
+                            <p>Authentication bypass và UNION-based data extraction</p>
                         </div>
                         <div className="xss-type">
-                            <h4>🟡 IDOR</h4>
-                            <p>Truy cập dữ liệu của người dùng khác thông qua ID</p>
+                            <h4>🟡 IDOR - 2 Labs (35đ)</h4>
+                            <p>Access control bypass và order manipulation</p>
                         </div>
                         <div className="xss-type">
-                            <h4>🟢 CSRF</h4>
-                            <p>Giả mạo request từ người dùng hợp lệ</p>
+                            <h4>🟢 CSRF - 2 Labs (55đ)</h4>
+                            <p>Email change và account deletion attacks</p>
                         </div>
                     </div>
                 </div>
