@@ -28,7 +28,7 @@ function App() {
             </Routes>
           </main>
           <footer className="footer">
-            <p>© 2025 XSS Security Lab - Dành cho mục đích học tập</p>
+            <p>© 2025 WebSec Lab - Dành cho mục đích học tập</p>
           </footer>
         </div>
       </Router>

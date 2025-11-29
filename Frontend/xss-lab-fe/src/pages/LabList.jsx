@@ -50,6 +50,54 @@ function LabList() {
             type: 'Stored XSS',
             description: 'Chèn XSS payload vào trang profile của người dùng',
             color: '#F44336'
+        },
+        {
+            id: 7,
+            title: 'Lab 7: SQL Injection - Authentication Bypass',
+            difficulty: 'Trung bình',
+            type: 'SQL Injection',
+            description: 'Bypass cơ chế xác thực bằng SQL Injection',
+            color: '#FF9800'
+        },
+        {
+            id: 8,
+            title: 'Lab 8: SQL Injection - Data Extraction',
+            difficulty: 'Khó',
+            type: 'SQL Injection',
+            description: 'Trích xuất dữ liệu nhạy cảm từ cơ sở dữ liệu',
+            color: '#F44336'
+        },
+        {
+            id: 9,
+            title: 'Lab 9: IDOR - Access Control Bypass',
+            difficulty: 'Dễ',
+            type: 'IDOR',
+            description: 'Truy cập thông tin người dùng khác thông qua ID',
+            color: '#4CAF50'
+        },
+        {
+            id: 10,
+            title: 'Lab 10: IDOR - Order Manipulation',
+            difficulty: 'Trung bình',
+            type: 'IDOR',
+            description: 'Xem và chỉnh sửa đơn hàng của người dùng khác',
+            color: '#FF9800'
+        },
+        {
+            id: 11,
+            title: 'Lab 11: CSRF - Change Email',
+            difficulty: 'Trung bình',
+            type: 'CSRF',
+            description: 'Thực hiện tấn công CSRF để thay đổi email người dùng',
+            color: '#FF9800'
+        },
+        {
+            id: 12,
+            title: 'Lab 12: CSRF - Delete Account',
+            difficulty: 'Khó',
+            type: 'CSRF',
+            description: 'Thực hiện tấn công CSRF để xóa tài khoản người dùng',
+            color: '#F44336'
         }
     ];
 
@@ -65,7 +113,7 @@ function LabList() {
     return (
         <div className="lab-list">
             <div className="lab-list-header">
-                <h1>Danh sách Lab XSS</h1>
+                <h1>Danh sách Lab Bảo Mật Web</h1>
                 <p>Chọn một lab để bắt đầu thực hành</p>
             </div>
 

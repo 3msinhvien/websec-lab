@@ -5,9 +5,9 @@ function Home() {
     return (
         <div className="home">
             <div className="hero-section">
-                <h1 className="hero-title">Chào mừng đến XSS Security Lab</h1>
+                <h1 className="hero-title">Chào mừng đến WebSec Lab</h1>
                 <p className="hero-subtitle">
-                    Nền tảng thực hành và học tập về các lỗ hổng Cross-Site Scripting (XSS)
+                    Nền tảng thực hành và học tập về các lỗ hổng bảo mật web
                 </p>
                 <Link to="/labs" className="cta-button">
                     Bắt đầu thực hành
@@ -41,25 +41,28 @@ function Home() {
             </div>
 
             <div className="info-section">
-                <h2 className="section-title">XSS là gì?</h2>
+                <h2 className="section-title">Các loại lỗ hổng bảo mật</h2>
                 <div className="info-content">
                     <p>
-                        Cross-Site Scripting (XSS) là một trong những lỗ hổng bảo mật web phổ biến nhất.
-                        XSS cho phép kẻ tấn công chèn mã độc (thường là JavaScript) vào các trang web được
-                        xem bởi người dùng khác.
+                        WebSec Lab cung cấp môi trường để thực hành với các lỗ hổng bảo mật web phổ biến nhất.
+                        Bạn sẽ được học cách tấn công và phòng chống các lỗ hổng này trong môi trường an toàn.
                     </p>
                     <div className="xss-types">
                         <div className="xss-type">
-                            <h4>🔴 Reflected XSS</h4>
-                            <p>Script độc được phản chiếu từ request và thực thi ngay lập tức</p>
+                            <h4>🔴 XSS (Cross-Site Scripting)</h4>
+                            <p>Chèn mã JavaScript độc hại vào trang web</p>
                         </div>
                         <div className="xss-type">
-                            <h4>🟠 Stored XSS</h4>
-                            <p>Script độc được lưu trữ trên server và thực thi khi người dùng truy cập</p>
+                            <h4>🟠 SQL Injection</h4>
+                            <p>Thực thi câu lệnh SQL độc hại để truy cập dữ liệu</p>
                         </div>
                         <div className="xss-type">
-                            <h4>🟡 DOM-based XSS</h4>
-                            <p>Lỗ hổng xảy ra ở phía client, trong DOM environment</p>
+                            <h4>🟡 IDOR</h4>
+                            <p>Truy cập dữ liệu của người dùng khác thông qua ID</p>
+                        </div>
+                        <div className="xss-type">
+                            <h4>🟢 CSRF</h4>
+                            <p>Giả mạo request từ người dùng hợp lệ</p>
                         </div>
                     </div>
                 </div>

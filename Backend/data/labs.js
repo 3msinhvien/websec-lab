@@ -64,6 +64,72 @@ export const labs = [
         hint: 'Có thể chèn payload vào trường bio hoặc tên. Thử các tag HTML và event handlers khác nhau.',
         solution: '<img src=x onerror="alert(document.cookie)">',
         points: 35
+    },
+    {
+        id: 7,
+        title: 'Lab 7: SQL Injection - Authentication Bypass',
+        difficulty: 'Trung bình',
+        type: 'SQL Injection',
+        description: 'Bypass cơ chế xác thực bằng SQL Injection',
+        objective: 'Đăng nhập mà không cần biết mật khẩu',
+        hint: 'Thử sử dụng comment (--) để bỏ qua phần kiểm tra mật khẩu. Ví dụ: admin\'-- ',
+        solution: 'admin\'--',
+        points: 25
+    },
+    {
+        id: 8,
+        title: 'Lab 8: SQL Injection - Data Extraction',
+        difficulty: 'Khó',
+        type: 'SQL Injection',
+        description: 'Trích xuất dữ liệu nhạy cảm từ cơ sở dữ liệu',
+        objective: 'Lấy thông tin từ bảng users bằng UNION-based SQLi',
+        hint: 'Sử dụng UNION SELECT để kết hợp kết quả từ bảng khác. Ví dụ: \' UNION SELECT username, password FROM users--',
+        solution: '\' UNION SELECT username, password FROM users--',
+        points: 35
+    },
+    {
+        id: 9,
+        title: 'Lab 9: IDOR - Access Control Bypass',
+        difficulty: 'Dễ',
+        type: 'IDOR',
+        description: 'Truy cập thông tin người dùng khác thông qua ID',
+        objective: 'Xem profile của người dùng khác bằng cách thay đổi ID',
+        hint: 'Thay đổi tham số user_id trong URL để truy cập profile người khác',
+        solution: 'user_id=2 (hoặc bất kỳ ID nào khác)',
+        points: 15
+    },
+    {
+        id: 10,
+        title: 'Lab 10: IDOR - Order Manipulation',
+        difficulty: 'Trung bình',
+        type: 'IDOR',
+        description: 'Xem và chỉnh sửa đơn hàng của người dùng khác',
+        objective: 'Truy cập và sửa đổi đơn hàng không thuộc về bạn',
+        hint: 'Thay đổi order_id trong URL hoặc request body để truy cập đơn hàng khác',
+        solution: 'order_id=123 (ID của người khác)',
+        points: 20
+    },
+    {
+        id: 11,
+        title: 'Lab 11: CSRF - Change Email',
+        difficulty: 'Trung bình',
+        type: 'CSRF',
+        description: 'Thực hiện tấn công CSRF để thay đổi email người dùng',
+        objective: 'Tạo form HTML để thay đổi email của nạn nhân',
+        hint: 'Tạo một form tự động submit với action trỏ đến endpoint thay đổi email',
+        solution: '<form action="/api/user/email" method="POST"><input name="email" value="hacker@evil.com"><input type="submit"></form>',
+        points: 25
+    },
+    {
+        id: 12,
+        title: 'Lab 12: CSRF - Delete Account',
+        difficulty: 'Khó',
+        type: 'CSRF',
+        description: 'Thực hiện tấn công CSRF để xóa tài khoản người dùng',
+        objective: 'Tạo payload CSRF để xóa tài khoản khi nạn nhân click vào',
+        hint: 'Sử dụng thẻ img hoặc form ẩn để tự động gửi request DELETE',
+        solution: '<img src="/api/user/delete?confirm=yes" style="display:none">',
+        points: 30
     }
 ];
 

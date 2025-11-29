@@ -1,6 +1,6 @@
-# XSS Lab Backend
+# WebSec Lab Backend
 
-Backend API cho ứng dụng XSS Security Lab.
+Backend API cho ứng dụng WebSec Lab.
 
 ## Công nghệ sử dụng
 

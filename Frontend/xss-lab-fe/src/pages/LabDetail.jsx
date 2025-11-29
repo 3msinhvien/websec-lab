@@ -6,6 +6,12 @@ import Lab3 from './labs/Lab3';
 import Lab4 from './labs/Lab4';
 import Lab5 from './labs/Lab5';
 import Lab6 from './labs/Lab6';
+import Lab7 from './labs/Lab7';
+import Lab8 from './labs/Lab8';
+import Lab9 from './labs/Lab9';
+import Lab10 from './labs/Lab10';
+import Lab11 from './labs/Lab11';
+import Lab12 from './labs/Lab12';
 import './LabDetail.css';
 
 function LabDetail() {
@@ -19,6 +25,12 @@ function LabDetail() {
         '4': Lab4,
         '5': Lab5,
         '6': Lab6,
+        '7': Lab7,
+        '8': Lab8,
+        '9': Lab9,
+        '10': Lab10,
+        '11': Lab11,
+        '12': Lab12,
     };
 
     const labInfo = {
@@ -51,6 +63,36 @@ function LabDetail() {
             title: 'Lab 6: Stored XSS - Profile Page',
             objective: 'Chèn XSS payload vào trang profile',
             hint: 'Có thể chèn payload vào trường bio hoặc tên. Thử các tag HTML và event handlers khác nhau.',
+        },
+        '7': {
+            title: 'Lab 7: SQL Injection - Authentication Bypass',
+            objective: 'Đăng nhập mà không cần biết mật khẩu',
+            hint: 'Thử sử dụng comment (--) để bỏ qua phần kiểm tra mật khẩu. Ví dụ: admin\'--',
+        },
+        '8': {
+            title: 'Lab 8: SQL Injection - Data Extraction',
+            objective: 'Lấy thông tin từ bảng users bằng UNION-based SQLi',
+            hint: 'Sử dụng UNION SELECT để kết hợp kết quả từ bảng khác. Ví dụ: 1 UNION SELECT username, password FROM users--',
+        },
+        '9': {
+            title: 'Lab 9: IDOR - Access Control Bypass',
+            objective: 'Xem profile của người dùng khác bằng cách thay đổi ID',
+            hint: 'Thay đổi tham số user_id trong URL để truy cập profile người khác',
+        },
+        '10': {
+            title: 'Lab 10: IDOR - Order Manipulation',
+            objective: 'Truy cập và sửa đổi đơn hàng không thuộc về bạn',
+            hint: 'Thay đổi order_id trong URL hoặc request body để truy cập đơn hàng khác',
+        },
+        '11': {
+            title: 'Lab 11: CSRF - Change Email',
+            objective: 'Tạo form HTML để thay đổi email của nạn nhân',
+            hint: 'Tạo một form tự động submit với action trỏ đến endpoint thay đổi email',
+        },
+        '12': {
+            title: 'Lab 12: CSRF - Delete Account',
+            objective: 'Tạo payload CSRF để xóa tài khoản khi nạn nhân click vào',
+            hint: 'Sử dụng thẻ img hoặc form ẩn để tự động gửi request DELETE',
         },
     };
 

@@ -1,4 +1,8 @@
-# React + Vite
+# WebSec Lab Frontend
+
+Frontend application for WebSec Lab - an educational platform for learning about web security vulnerabilities including XSS, SQL Injection, IDOR, and CSRF.
+
+## React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
